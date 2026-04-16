@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Stop - EBRU</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Estilos específicos para la página de proyecto -->
+    <style>
+        .project-hero {
+            padding: 12rem var(--padding-global) 4rem;
+        }
+        
+        .project-hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(3rem, 10vw, 12rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            padding: 0 var(--padding-global);
+        }
+
+        .roles {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .roles p {
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .roles h3 {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .project-description {
+            font-size: clamp(1.2rem, 2vw, 2rem);
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+        
+        .project-description strong {
+            color: var(--text-primary);
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Pequeña separación o 0 para que se vea continuo */
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 1024px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="film-grain"></div>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">EBRU.</a>
+        <nav>
+            <a href="#" id="lang-toggle" style="margin-right:1rem; font-weight:700; color:var(--accent);">EN</a>
+            <a href="index.html#work" data-i18n="nav.work">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="https://wa.me/593958831259" target="_blank" class="btn-primary" data-i18n="nav.contact">Let's Talk</a>
+        </nav>
+    </header>
+
+    <main data-scroll-container>
+        <section class="project-hero">
+            <h1 class="project-hero-title">AURA<br><span class="accent-text">COSMETICS</span></h1>
+        </section>
+
+        <section class="project-details">
+            <div class="roles">
+                <div>
+                    <p data-i18n="project.client">Client</p>
+                    <h3>Aura Skin Co.</h3>
+                </div>
+                <div>
+                    <p data-i18n="project.services">Services</p>
+                    <h3>Brand Strategy<br>Visual Identity<br>Packaging</h3>
+                </div>
+                <div>
+                    <p>Year</p>
+                    <h3>2026</h3>
+                </div>
+            </div>
+            <div class="project-description">
+                <p data-i18n="project.desc"><strong>Redefiniendo el cuidado de la piel.</strong> Aura Cosmetics necesitaba una identidad visual que hablara de pureza, transparencia estética y eficacia clínica. Desarrollamos un sistema de diseño brutalista pero accesible que se desmarca completamente de las marcas de bienestar tradicionales.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <!-- Ejemplo de imágenes apiladas, estilo Better Projects -->
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" alt="Aura Packaging">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2564&auto=format&fit=crop" alt="Aura Brand Guidelines">
+            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2564&auto=format&fit=crop" alt="Aura Product Setup">
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-cta">
+            <h2>NEXT<br>PROJECT.</h2>
+            <a href="#" class="btn-massive">NEXUS TECH <i data-lucide="arrow-right"></i></a>
+        </div>
+        <div class="footer-contact-info" style="margin-top: 4rem; display: flex; gap: 3rem; font-size: clamp(1rem, 2vw, 1.5rem); padding: 0 var(--padding-global);">
+            <a href="mailto:dirom1988@gmail.com" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; transition: color 0.3s; hover: color: var(--accent);">dirom1988@gmail.com</a>
+            <a href="https://wa.me/593958831259" target="_blank" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; transition: color 0.3s;">+593 958 831 259</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EBRU. Diego Romero. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
