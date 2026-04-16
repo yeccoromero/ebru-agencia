@@ -23,10 +23,13 @@
 
     <header class="site-header">
         <div class="logo">EBRU.</div>
-        <nav>
+        <div class="mobile-controls">
             <a href="#" id="lang-toggle" style="margin-right:1rem; font-weight:700; color:var(--accent);">EN</a>
-            <a href="#work" data-i18n="nav.work">Work</a>
-            <a href="#about" data-i18n="nav.about">About</a>
+            <button id="menu-toggle" class="hamburger-btn"><i data-lucide="menu"></i></button>
+        </div>
+        <nav id="main-nav">
+            <a href="#work" data-i18n="nav.work" class="nav-link">Work</a>
+            <a href="#about" data-i18n="nav.about" class="nav-link">About</a>
             <a href="https://wa.me/593958831259" target="_blank" class="btn-primary" data-i18n="nav.contact">Let's Talk</a>
         </nav>
     </header>

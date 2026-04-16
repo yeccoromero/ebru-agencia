@@ -37,3 +37,27 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+    // Hamburger Menu Logic
+    const menuBtn = document.getElementById("menu-toggle");
+    const mainNav = document.getElementById("main-nav");
+    if(menuBtn && mainNav) {
+        menuBtn.addEventListener("click", () => {
+            const isActive = mainNav.classList.toggle("active");
+            if(window.lucide) {
+                menuBtn.innerHTML = isActive ? "<i data-lucide='x'></i>" : "<i data-lucide='menu'></i>";
+                lucide.createIcons();
+            }
+        });
+        
+        // Close menu on link click
+        document.querySelectorAll("#main-nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                mainNav.classList.remove("active");
+                if(window.lucide){
+                    menuBtn.innerHTML = "<i data-lucide='menu'></i>";
+                    lucide.createIcons();
+                }
+            });
+        });
+    }
